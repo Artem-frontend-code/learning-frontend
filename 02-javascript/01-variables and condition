@@ -1,0 +1,17 @@
+// Логические функции
+console.log(false || true); //false и true с маленькой буквы
+
+console.log(93>2);
+//Переменные разных типов
+let namee="dima",x=48;
+console.log(typeof(namee),typeof(x),namee+5,x+5) //typeof унарный оператор и принимает одно значение
+
+console.log(Math.max(5,15)*2)
+//Условия
+if (x<40){
+    console.log("мало")
+} else if(x<50){
+    console.log("чуть больше")
+} else{
+    console.log("полтос")
+}
