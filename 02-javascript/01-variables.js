@@ -2,6 +2,7 @@
 
 //let объявляет переменную
 let userName="Artem"; //string тип
+
 // Каждое последующее слово с заглавной буквы - верблюжья нотация
 let userNameVip="Shadowfiend";
 
@@ -42,10 +43,12 @@ console.log( +"" );   // 0
 let count=2;
 count++;
 console.log(count)
+
 //Декремент
 let count_2=2;
 count_2--;
 console.log(count_2)
+
 //префиксная форма --count_2 уменьшает на 1 и возвращает новое значение
 //Пост префиксное count++ - увеличивают переменную на один и возвращают старое
 let counter = 1;
