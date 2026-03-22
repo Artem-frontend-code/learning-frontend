@@ -56,7 +56,54 @@ while(p < 3){
 }
 
 //Задание 3:Напишите цикл, который предлагает prompt ввести число, большее 100. Если посетитель ввёл другое число – попросить ввести ещё раз, и так далее.
+/*
 let userNumber;
 do{
     userNumber=prompt("Введите число",0);
 } while (userNumber<=100 && userNumber);
+*/
+//Задание 4:Напишите код, который выводит все простые числа из интервала от 2 до n.
+let n = 10;
+nextPrime:
+for (let i = 2; i <= n; i++) { 
+
+  for (let j = 2; j < i; j++) { 
+    if (i % j == 0) continue nextPrime; 
+  }
+
+  console.log( i ); // простое число
+}
+//не понял че то как метки работают и перепишу код
+
+//Задание 5:Напишите цикл, который делает семь вызовов console. log и выводит сле­дующий треугольник:
+/*
+#
+##
+###
+#### и тд до 7 в ширину
+*/
+let count7=0;
+let StringSize="";
+while (count7 < 7){
+    StringSize+="#"; //нашел подсказку
+    console.log(StringSize);
+    count7++;
+}
+
+//Задание 6: FizzBuzz
+
+for (let FuzzBuzzCount = 1; FuzzBuzzCount <=100; FuzzBuzzCount++){
+    if (FuzzBuzzCount % 3 === 0){
+        if (FuzzBuzzCount % 5 ===0){
+            console.log("FizzBuzz")
+        } else{
+            console.log("Fizz")
+        }
+
+    } else if (FuzzBuzzCount % 5 === 0 && FuzzBuzzCount % 3 !== 0){
+        console.log("Buzz")
+    }  else{
+        console.log(FuzzBuzzCount)
+    }
+
+}
