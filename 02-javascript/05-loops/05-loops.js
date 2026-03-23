@@ -107,3 +107,28 @@ for (let FuzzBuzzCount = 1; FuzzBuzzCount <=100; FuzzBuzzCount++){
     }
 
 }
+//Задание 7: шахматная доска
+let size=4;
+let chessPlace="";
+for (let chess1=1;chess1<=size;chess1++){
+    for(let chess2=1;chess2<=size;chess2++){
+        if (chess1 % 2==0){
+            if (chess2 % 2 === 0){
+            chessPlace+="#";
+        } else{
+            chessPlace+=" ";
+        }
+        } else{
+            if (chess2 % 2 === 0){
+            chessPlace+=" ";
+        } else{
+            chessPlace+="#";
+        }
+        }
+        
+    
+    }
+console.log(chessPlace);
+chessPlace="";
+
+}
