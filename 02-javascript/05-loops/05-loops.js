@@ -115,13 +115,13 @@ for (let chess1=1;chess1<=size;chess1++){
         if (chess1 % 2==0){
             if (chess2 % 2 === 0){
             chessPlace+="#";
-        } else{
+        }   else{
             chessPlace+=" ";
         }
         } else{
             if (chess2 % 2 === 0){
             chessPlace+=" ";
-        } else{
+        }   else{
             chessPlace+="#";
         }
         }
