@@ -44,7 +44,7 @@ for (let i = 0; i < numberArr.length; i++){
 }
 console.log(minNum);
 
-//Задание 3
+//Задание 3 - сортировка - разобрать еще раз
 let usersByDay = [5, 4, 3, 2, 1, 0];
 console.log(usersByDay);
 
@@ -61,3 +61,36 @@ for (let i = 0; i < usersByDay.length; i++) {
   }
 }
 console.log(usersByDay);
+
+//добавляет элемент в конец
+ usersByDay.push(5);
+
+//извлекается элемент из конца
+usersByDay.pop();
+console.log(usersByDay);
+
+//извлекает элемент из начала
+usersByDay.shift()
+console.log(usersByDay);
+
+//добаляет элемент в начало
+usersByDay.unshift(0);
+console.log(usersByDay);
+
+//метод splice 
+//arr.splice(start, deleteCount, elem1, ..., elemN)
+usersByDay.splice(1, 2, "Удалено", "Тоже удалено");
+console.log(usersByDay);
+
+//forEach - arr.forEach(function(item, index, array) {});
+//usersByDay.forEach(a => { console.log(a);});
+
+//indexOf и include 
+console.log(usersByDay.indexOf(5));
+
+//find
+console.log(usersByDay.find(item => item === 4));
+
+//findIndex
+console.log(usersByDay.findIndex(item => item === 'Удалено'));
+
