@@ -72,3 +72,16 @@ const calori = () => {
 alert( calori() );
 */
 
+// ставка в час если срочно или не срочный проект
+let getPrice = function (time, isSrochno) {
+  let bet = 1500;
+  if (isSrochno === true) {
+    time /= 2;
+    bet *= 2.5;
+  }
+  if (time > 150) {
+    bet -= 250;
+  }
+  return time * bet
+}
+

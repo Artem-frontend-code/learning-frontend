@@ -9,6 +9,6 @@ userStat.isSmoking = false;
 delete userStat.email;
 console.log(userStat);
 
-for (let key in userStat){
-    console.log( userStat.key );
+for (let key in userStat) {
+    console.log( userStat[key] );
 }
