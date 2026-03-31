@@ -12,7 +12,8 @@ console.log(userStat);
 for (let key in userStat) {
     console.log( userStat[key] );
 }
-// Задание
+
+// Задание 1
 
 let getStatistics = function (players) {
   let allGoal = 0 ;
@@ -27,3 +28,28 @@ let getStatistics = function (players) {
 };
 
 console.log(getStatistics([{"name":"Васька","goals":3,"passes":2},{"name":"Байт","goals":10,"passes":1},{"name":"Снежок","goals":2,"passes":14}]));
+
+//Задание 2
+
+let materialPrice = {
+  'wood': 1000,
+  'stone': 1500,
+  'brick': 2000
+};
+
+let house = {
+  rooms: 10,
+  floors: 5,
+  material: 'wood',
+  coefficient: 10.5,
+  calculateSquare() {
+    return this.rooms * this.coefficient * this.floors
+  },
+  
+  calculatePrice () {
+    return this.calculateSquare() * materialPrice[this.material]
+  }
+};
+
+console.log(house.calculatePrice());
+
