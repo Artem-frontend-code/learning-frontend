@@ -53,3 +53,21 @@ let house = {
 
 console.log(house.calculatePrice());
 
+//Мини проектик создание персонажа - идею подкинули
+const nameCharacter = ["Пустота", "Азраил" , "Эларион", "Чапочка", "Астра"];
+const nameItem = ["Лук", "Одноручный меч", "Сабля", "Двуручный меч"];
+const race = ["Скелет", "Человек", "Вампир"];
+
+function createCharacter () {
+  const name = nameCharacter[Math.floor(Math.random() * nameCharacter.length)];
+  const item = nameItem[Math.floor(Math.random() * nameItem.length)];
+  const characterRace = race[Math.floor(Math.random() * race.length)];
+  let character = {
+    name: name,
+    item: item,
+    race: characterRace,
+  }
+  return character
+
+}
+console.log(createCharacter());
