@@ -62,12 +62,40 @@ function createCharacter () {
   const name = nameCharacter[Math.floor(Math.random() * nameCharacter.length)];
   const item = nameItem[Math.floor(Math.random() * nameItem.length)];
   const characterRace = race[Math.floor(Math.random() * race.length)];
+  const damage = Math.floor(Math.random() * 100);
   let character = {
     name: name,
     item: item,
     race: characterRace,
+    level: 1,
+    damage: damage,
+    health: function () {
+      return this.level * 10
+    } 
+  }
+  if (this.name === "Чапочка"){
+    this.damage = 999;
   }
   return character
 
 }
-console.log(createCharacter());
+
+function dual (first, second) {
+  if (first.damage > second.damage) {
+    first.level += 1;
+    console.log(first.name + " ПОБЕДИЛ!!");
+  } else if (first.damage < second.damage) {
+    second.level += 1;
+    console.log(second.name + " ПОБЕДИЛ!!");
+  } else {
+    console.log("Нужен реванш!");
+  }
+
+
+}
+
+let hero1 = createCharacter();
+let hero2 = createCharacter();
+
+dual (hero1, hero2);
+console.log(hero1.health(), hero2.health());
