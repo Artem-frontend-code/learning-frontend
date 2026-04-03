@@ -73,8 +73,8 @@ function createCharacter () {
       return this.level * 10
     } 
   }
-  if (this.name === "Чапочка"){
-    this.damage = 999;
+  if (character.name === "Чапочка"){
+    character.damage = 999;
   }
   return character
 
