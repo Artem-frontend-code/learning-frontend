@@ -94,6 +94,8 @@ console.log(usersByDay.find(item => item === 4));
 //findIndex
 console.log(usersByDay.findIndex(item => item === 'Удалено'));
 
+//map возвращает массив с указанными изменениями
 let first = [2, 4, 5, 6];
 let testArr = first.map ((elem) => {return elem ** 2});
 console.log(testArr);
+

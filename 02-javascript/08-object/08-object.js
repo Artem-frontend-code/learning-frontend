@@ -56,13 +56,20 @@ console.log(house.calculatePrice());
 //Мини проектик создание персонажа - идею подкинули
 const nameCharacter = ["Пустота", "Азраил" , "Эларион", "Чапочка", "Астра"];
 const nameItem = ["Лук", "Одноручный меч", "Сабля", "Двуручный меч"];
+const weapons = {
+  Лук: 1,
+  "Одноручный меч": 5,
+  "Двуручный меч": 10,
+  Сабля: 4,
+}
 const race = ["Скелет", "Человек", "Вампир"];
 
 function createCharacter () {
-  const name = nameCharacter[Math.floor(Math.random() * nameCharacter.length)];
   const item = nameItem[Math.floor(Math.random() * nameItem.length)];
+  const name = nameCharacter[Math.floor(Math.random() * nameCharacter.length)];
+  
   const characterRace = race[Math.floor(Math.random() * race.length)];
-  const damage = Math.floor(Math.random() * 100);
+  const damage = weapons[item];
   let character = {
     name: name,
     item: item,
@@ -96,6 +103,6 @@ function dual (first, second) {
 
 let hero1 = createCharacter();
 let hero2 = createCharacter();
-
+console.log(hero1);
 dual (hero1, hero2);
-console.log(hero1.health(), hero2.health());
+
