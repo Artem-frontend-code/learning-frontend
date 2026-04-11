@@ -62,7 +62,14 @@ const weapons = {
   "Двуручный меч": 10,
   Сабля: 4,
 }
+
+
 const race = ["Скелет", "Человек", "Вампир"];
+const raceStat = {
+  Скелет: [10,5],
+  Человек: [5,10],
+  Вампир: [10,10]
+}
 
 function createCharacter () {
   const item = nameItem[Math.floor(Math.random() * nameItem.length)];
@@ -105,4 +112,5 @@ let hero1 = createCharacter();
 let hero2 = createCharacter();
 console.log(hero1);
 dual (hero1, hero2);
+console.log(raceStat.Скелет);
 
