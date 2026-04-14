@@ -18,6 +18,7 @@ function createCharacter () {
   
   const characterRace = race[Math.floor(Math.random() * race.length)];
   const damage = weapons[item];
+
   let character = {
     name: name,
     item: item,
@@ -36,6 +37,10 @@ function createCharacter () {
         Уровень: ${this.level}
         Урон: ${this.damage}
         `
+    },
+    upLevel() {
+      this.level++;
+      return `${this.name} потренировался и теперь его уровень ${this.level}`
     }
   }
   if (character.name === "Чапочка"){
@@ -61,4 +66,4 @@ function dual (first, second) {
 
 let hero1 = createCharacter();
 let hero2 = createCharacter();
-console.log(hero1.getCharacter());
+console.log(hero1.upLevel());
