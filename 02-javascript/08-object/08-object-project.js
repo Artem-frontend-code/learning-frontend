@@ -8,8 +8,11 @@ const weapons = {
   Сабля: 4,
 }
 
-
-const race = ["Скелет", "Человек", "Вампир"];
+const race = {
+  skeleton: { bonusDamage: 10, bonusHealth: 0, name: 'Скелет' },
+  human: { bonusDamage: 0, bonusHealth: 20, name: 'Человек' },
+  vampire: { bonusDamage: 5, bonusHealth: 10, name: 'Вампир' }
+};
 
 
 function createCharacter () {
