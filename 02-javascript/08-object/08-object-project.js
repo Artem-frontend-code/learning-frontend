@@ -8,11 +8,11 @@ const weapons = {
   Сабля: 4,
 }
 
-const race = {
-  skeleton: { bonusDamage: 10, bonusHealth: 0, name: 'Скелет' },
-  human: { bonusDamage: 0, bonusHealth: 20, name: 'Человек' },
-  vampire: { bonusDamage: 5, bonusHealth: 10, name: 'Вампир' }
-};
+const race = [
+  skeleton = { bonusDamage: 10, bonusHealth: 0, name: 'Скелет' },
+  human = { bonusDamage: 0, bonusHealth: 20, name: 'Человек' },
+  vampire = { bonusDamage: 5, bonusHealth: 10, name: 'Вампир' }
+];
 
 
 function createCharacter () {
@@ -25,11 +25,11 @@ function createCharacter () {
   let character = {
     name: name,
     item: item,
-    race: characterRace,
+    race: characterRace.name,
     level: 1,
-    damage: damage,
+    damage: damage + characterRace.bonusDamage,
     health: function () {
-      return this.level * 10
+      return this.level * 10 + characterRace.bonusHealth
     } ,
 
     getCharacter() {
@@ -69,4 +69,4 @@ function dual (first, second) {
 
 let hero1 = createCharacter();
 let hero2 = createCharacter();
-console.log(hero1.upLevel());
+console.log(hero1.getCharacter());
