@@ -54,14 +54,20 @@ function createCharacter () {
 }
 
 function dual (first, second) {
-  if (first.damage > second.damage) {
-    first.level += 1;
-    console.log(first.name + " ПОБЕДИЛ!!");
-  } else if (first.damage < second.damage) {
-    second.level += 1;
-    console.log(second.name + " ПОБЕДИЛ!!");
-  } else {
-    console.log("Нужен реванш!");
+  let firstHealth = first.health();
+  let secondHealth = second.health();
+  while(firstHealth > 0 || secondHealth > 0) {
+    firstHealth -= second.damage;
+    secondHealth -= first.damage;
+    if (secondHealth == 0) {
+      first.level++;
+      return `${first.name} выиграл!`;
+      
+    } else {
+      second.level++;
+      return `${second.name} выиграл!`;
+      
+    }
   }
 
 
@@ -70,3 +76,4 @@ function dual (first, second) {
 let hero1 = createCharacter();
 let hero2 = createCharacter();
 console.log(hero1.getCharacter());
+console.log(dual(hero1, hero2));
