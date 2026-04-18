@@ -48,6 +48,7 @@ function createCharacter () {
   }
   if (character.name === "Чапочка"){
     character.damage = 999;
+    character.level = 999;
   }
   return character
 
