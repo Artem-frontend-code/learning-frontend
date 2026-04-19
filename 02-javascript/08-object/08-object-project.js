@@ -9,9 +9,9 @@ const weapons = {
 }
 
 const race = [
-  skeleton = { bonusDamage: 10, bonusHealth: 0, name: 'Скелет' },
-  human = { bonusDamage: 0, bonusHealth: 20, name: 'Человек' },
-  vampire = { bonusDamage: 5, bonusHealth: 10, name: 'Вампир' }
+  { bonusDamage: 10, bonusHealth: 0, name: 'Скелет' },
+  { bonusDamage: 0, bonusHealth: 20, name: 'Человек' },
+  { bonusDamage: 5, bonusHealth: 10, name: 'Вампир' }
 ];
 
 
@@ -32,13 +32,14 @@ function createCharacter () {
       return this.level * 10 + characterRace.bonusHealth
     } ,
 
-    getCharacter() {
+    getInfo() {
         return `
         Имя: ${this.name}
         Оружие: ${this.item}
         Раса: ${this.race}
         Уровень: ${this.level}
         Урон: ${this.damage}
+        Здоровье: ${this.health()}
         `
     },
     upLevel() {
@@ -57,10 +58,10 @@ function createCharacter () {
 function dual (first, second) {
   let firstHealth = first.health();
   let secondHealth = second.health();
-  while(firstHealth > 0 || secondHealth > 0) {
+  while(firstHealth > 0 && secondHealth > 0) {
     firstHealth -= second.damage;
     secondHealth -= first.damage;
-    if (secondHealth == 0) {
+    if (secondHealth <= 0) {
       first.level++;
       return `${first.name} выиграл!`;
       
@@ -76,5 +77,5 @@ function dual (first, second) {
 
 let hero1 = createCharacter();
 let hero2 = createCharacter();
-console.log(hero1.getCharacter());
+console.log(hero1.getInfo());
 console.log(dual(hero1, hero2));
