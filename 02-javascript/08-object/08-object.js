@@ -53,5 +53,12 @@ let house = {
 
 console.log(house.calculatePrice());
 
+function User(name, age) {
+  this.name = name;
+  this.age = age;
 
+}
 
+let user1;
+user1 = new User("gdgd", 20)
+console.log(user1);
