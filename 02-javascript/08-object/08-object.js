@@ -62,3 +62,8 @@ function User(name, age) {
 let user1;
 user1 = new User("gdgd", 20)
 console.log(user1);
+
+let users = [];
+users.push(new User("Artem", 25));
+users.push(new User("Vova", 95));
+console.log(users);
