@@ -31,3 +31,7 @@
   grid-area: disclaimer;
   align-self: end;
 }
+
+.cardFlex {
+  display: flex;
+}
