@@ -99,3 +99,8 @@ let first = [2, 4, 5, 6];
 let testArr = first.map ((elem) => {return elem ** 2});
 console.log(testArr);
 
+for (let i of first) {
+  console.log(i);
+
+}
+
