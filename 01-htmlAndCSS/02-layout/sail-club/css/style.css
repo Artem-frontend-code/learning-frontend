@@ -148,3 +148,135 @@ body {
     color:#8693A4;
     line-height: 19px;
 }
+
+.main-nav {
+    display: flex;
+    padding: 20px 55px;
+    justify-content: space-between;
+    width: 1170px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+}
+
+.logo {
+    margin:0;
+    margin-right: auto;
+    width:64px;
+    
+}
+
+.site-navigation {
+    margin: 0;
+    margin-right: 40px;
+    padding: 0;
+    list-style: none;
+    width: 560px;
+
+}
+
+.user-acc {
+    width: 36px;
+}
+
+.hero {
+    width: 1170px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+.hero h1 {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.events {
+    display: flex;
+    width: 1030px;
+    margin: 0 auto;
+}
+
+.event-1 div{
+    width: 400px;
+    margin-right: 30px;
+}
+.event-1 {
+    margin-bottom: 100px;
+}
+
+.event-2 {
+    margin-bottom: 120px;
+    flex-direction: row-reverse;
+}
+
+.event-2 div {
+    margin-left: 30px;
+}
+
+.news {
+    width: 770px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+.news figure {
+    margin: 0;
+    margin-top: 40px;
+}
+.news .main-photo {
+    width: 100%;
+}
+
+.contacts {
+    
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+
+.contacts .contacts-content {
+    width: 400px;
+}
+
+.contacts-img {
+    width: 670px;
+    
+    
+}
+
+.main-footer {
+    
+    margin-bottom: 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 55px;
+    margin:0;
+}
+.footer-navigation-topics {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-navigation-item ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+.footer-navigation-item {
+    width: 165px;
+    margin-right: 70px;
+}
+
+.footer-logo {
+    margin-left: 55px;
+}

@@ -6,6 +6,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
+        <link href="css/outline.css" rel="stylesheet">
+        <link href="css/outline-settings.css" rel="stylesheet">
     </head>
     <body>
         <header class="main-header">
@@ -32,10 +34,10 @@
                 <li class="site-navigation-item">
                     <a href="#">Контакты</a>
                 </li>
-                <li class="site-navigation-item">
-                    <img src="img/icon.svg" width="16" height="18">
-                </li>
             </ul>
+            <a class="user-acc">
+                    <img src="img/icon.svg" width="16" height="18">
+            </a>
             </nav>
         </header>
         <main>
@@ -44,17 +46,20 @@
                 <img src="img/main photo 1.jpg" alt="парусный корабль" width="1170" height="466">
             </section>
             
-            <article class="events">
+            <article class="events event-1">
+                <div>
                 <p> 
                     <time datetime="2025-10-20">20 октября</time> - 
                     <time datetime="2025-04-19">19 апреля</time>
                 </p>
                 <h2>Стань частью команды</h2>
                 <p>Если вы давно хотели попробовать себя в яхтинге – сейчас самое лучшее время! Мы набираем команду будущих шкиперов. За 6 месяцев вы станете настоящим капитаном и уже в следующем сезоне сможете самостоятельно выйти в море!</p>
+                </div>
                 <img src="img/photo 2.jpg" alt="мужчина с биноклем" width="600" height="262">
             </article>
 
-            <article class="events">
+            <article class="events event-2">
+                <div>
                 <p>
                     <time datetime="2024-07-20">16 июля</time> - 
                     <time datetime="2025-07-19">23 июля</time>
@@ -62,6 +67,7 @@
                 </p>
                 <h2>Рожденные в воде</h2>
                 <p>Подарите детям настоящее приключение! День с морскими пиратами на корабле – это лучшая команда, веселые аниматоры, игры, соревнования, работа в команде и, конечно, море!</p>
+                </div>
                 <img src="img/photo 3.jpg" alt="дети на корабле" width="600" height="252">
             </article>
             
@@ -69,7 +75,7 @@
                 <h2>Новости</h2>
                 <article class="post">
                     <figure>
-                        <img src="img/newsphoto.jpg" alt="фотография шкипера Ивана Кулешова" width="770" height="301">
+                        <img class="main-photo" src="img/newsphoto.jpg" alt="фотография шкипера Ивана Кулешова" width="770" height="301">
                         <figcaption>Победитель регаты шкипер Иван Кулешов</figcaption>
                     </figure>
                     <h3>Итоги регаты Sochi Race Week 2020</h3>
@@ -101,6 +107,7 @@
             </section>
             
             <section class="contacts">
+                <div class="contacts-content">
                 <h2>Контакты</h2>
                 <ul class="contacts-list">
                     <li class="contacts-list-item">
@@ -124,12 +131,17 @@
                         </ul>
                     </li>
                 </ul>
+            </div>
+            
                 <a href="#">
-                    <img src="img/map.png" alt="карта проезда" width="670" height="351">
+                    <img class="contacts-img" src="img/map.png" alt="карта проезда" width="670" height="351">
                 </a>
+            
             </section>
         </main>
         <footer class="main-footer">
+            <div class="footer-container">
+            <div class="footer-logo">
             <a href="#">
                 <img src="img/logotype.svg" alt="logo" width="100" height="106">
             </a>
@@ -139,9 +151,9 @@
             <p class="copyright">
                 Яхтклуб ©2020 Все права защищены
             </p>
-            
+            </div>
 
-            <ul class="footer-navigation">
+            <ul class="footer-navigation-topics">
                 <li class="footer-navigation-item">
                     <h2>Компания</h2>
                     <ul>
@@ -183,6 +195,7 @@
                     </ul>
                 </li>
             </ul>
+            </div>
         </footer>
     </body>
 </html>
