@@ -12,7 +12,7 @@ const race = [
   { bonusDamage: 10, bonusHealth: 0, name: 'Скелет' },
   { bonusDamage: 0, bonusHealth: 20, name: 'Человек' },
   { bonusDamage: 5, bonusHealth: 10, name: 'Вампир' },
-  {bonusDamage: 5, bonusHealth: 30, name: 'Оборотень'},
+  { bonusDamage: 5, bonusHealth: 30, name: 'Оборотень'},
 ];
 
 
