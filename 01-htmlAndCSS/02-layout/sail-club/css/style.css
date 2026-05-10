@@ -82,14 +82,7 @@ body {
     color:#163152;
 }
 
-.main-footer a {
-    text-decoration: none;
-    color:#163152;
-}
-.footer-navigation h2{
-    font-weight: 700;
-    
-}
+
 
 .news h2 {
     font-size: 24px;
@@ -297,6 +290,17 @@ body {
 .contacts-img {
     width: 670px;
     
+    
+}
+
+
+.main-footer a {
+    text-decoration: none;
+    color:#163152;
+}
+
+.footer-navigation h2{
+    font-weight: 700;
     
 }
 
