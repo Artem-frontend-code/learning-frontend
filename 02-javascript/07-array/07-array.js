@@ -106,3 +106,4 @@ for (let i of first) {
 
 let rotovirus = ["pizdec", "слабость"];
 
+let slavost = ["ploxo", "слабость"];
