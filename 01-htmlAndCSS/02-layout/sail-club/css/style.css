@@ -20,12 +20,23 @@ body {
     color: #163152;
     text-decoration: none;
 }
+
+.site-navigation-item a:hover{
+    color:rgba(22, 49, 82, 0.5);
+}
+
+.site-navigation-item a:active{
+    color:rgba(22, 49, 82, 0.3);
+}
+
 .hero h1 {
     text-transform: uppercase;
     font-style: italic;
     font-weight: normal;
     line-height: 60px;
     font-size: 44px;
+
+    margin-left: 70px;
   
 }
 .events h2 {
@@ -36,6 +47,10 @@ body {
     text-underline-position: under;
     font-size: 24px;
     line-height: 34px;
+
+    margin-bottom: 35px;
+    margin-top:0;
+
 }
 
 
@@ -46,6 +61,40 @@ body {
     text-transform: uppercase;
 
 }
+.events {
+    display: flex;
+    width: 1030px;
+    margin: 0 auto;
+    
+}
+.events p {
+    margin-top: 0;
+    margin-bottom: 10px;;
+}
+
+.event-1 div{
+    width: 400px;
+    margin-right: 30px;
+}
+
+.event-1 {
+    margin-bottom: 100px;
+}
+
+.event-2 {
+    margin-bottom: 120px;
+    flex-direction: row-reverse;
+    
+}
+
+.event-2 div {
+    margin-left: 30px;
+    width: 400px;
+    text-align: right;
+    
+    
+}
+
 
 .contacts h3 {
     
@@ -158,7 +207,7 @@ body {
 }
 .main-nav {
     display: flex;
-    
+    align-items: center;
 
 }
 
@@ -170,6 +219,9 @@ body {
 }
 
 .site-navigation {
+    display: flex;
+    gap: 30px;
+    
     margin: 0;
     margin-right: 40px;
     padding: 0;
@@ -180,6 +232,7 @@ body {
 
 .user-acc {
     width: 36px;
+    
 }
 
 .hero {
@@ -193,28 +246,7 @@ body {
     margin-bottom: 40px;
 }
 
-.events {
-    display: flex;
-    width: 1030px;
-    margin: 0 auto;
-}
 
-.event-1 div{
-    width: 400px;
-    margin-right: 30px;
-}
-.event-1 {
-    margin-bottom: 100px;
-}
-
-.event-2 {
-    margin-bottom: 120px;
-    flex-direction: row-reverse;
-}
-
-.event-2 div {
-    margin-left: 30px;
-}
 
 
 .gallery {
