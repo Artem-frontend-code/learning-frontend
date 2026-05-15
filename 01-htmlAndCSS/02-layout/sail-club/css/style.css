@@ -235,6 +235,14 @@ body {
     
 }
 
+.user-acc:hover {
+    opacity: 0.5;
+}
+
+.user-acc:active {
+    opacity: 0.3;
+}
+
 .hero {
     width: 1170px;
     margin: 0 auto;
@@ -270,9 +278,11 @@ body {
 
 .active-photo {
     margin-right: 30px;
+    display:block;
     
 
 }
+
 
 .slides {
     display: flex;
@@ -286,12 +296,33 @@ body {
 
 .preview-slides li {
     margin-bottom: 30px;
+    margin-top: 0;
 }
 
 .preview-slides li:last-child {
     margin-bottom: 0;
 }
 
+.preview-slides a {
+    display: block;
+    position: relative;
+
+}
+
+.preview-slides a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.preview-slides a.active-item::before {
+    background-color: transparent;
+   
+}
 
 .news {
     width: 770px;
