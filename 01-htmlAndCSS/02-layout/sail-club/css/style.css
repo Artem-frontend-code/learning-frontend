@@ -193,7 +193,17 @@ body {
 .post-footer .share {
     margin-left: auto;
     align-self: center;
+    
 }
+
+.post-footer .share:hover {
+    opacity: 0.5;
+}
+
+.post-footer .share:active {
+    opacity: 0.3;
+}
+
 .post-footer p {
     
     font-weight: 700;
@@ -424,27 +434,78 @@ body {
    
 }
 
-.post blockquote p {
-    
-}
+
 .contacts {
     
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     
+    
 }
 
 .contacts-content {
     width: 400px;
+    padding-top: 50px;
+    
 }
 
 .contacts-img {
     width: 670px;
     
+}
+
+.contacts-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contacts-list li {
+    
+    margin: 0;
+    margin-bottom: 15px;
     
 }
 
+.contacts-list h3 {
+    display: inline;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.contacts-list address,
+.contacts-list p{
+    display: inline;
+}
+
+.social-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    gap: 15px;
+}
+
+.social-list-item a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 198, 189, 1);
+    border-radius: 50%;
+}
+
+.social-list-item a:hover {
+    opacity: 0.5;
+}
+
+.social-list-item a:active {
+    opacity: 0.3;
+}
 
 .main-footer a {
     text-decoration: none;
@@ -489,22 +550,34 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
+    
 
 }
 
 .footer-navigation-item {
     width: 165px;
     
+    
+}
+
+.footer-navigation-item li {
+    margin-bottom: 12px;
+    
+}
+
+.footer-navigation-item li:last-child {
+    margin-bottom: 0;
+    
 }
 
 .footer-column {
     width: 175px;
-    
 }
 
 .footer-logo {
     width: 100px;
-
+    display:block;
+    margin-bottom: 30px;
 }
 .footer-navigation-item h2 {
   margin-top: 0;
@@ -516,4 +589,12 @@ body {
 
 }
 
+.copyright {
+    margin: 0;
+}
+
+.policy {
+    margin: 0;
+    margin-bottom: 8px;
+}
 
