@@ -1,5 +1,5 @@
 main {
-    width: 1280px;
+    width: 1170px;
     margin: 0 auto;
 }
 
@@ -254,12 +254,12 @@ body {
 .site-navigation {
     display: flex;
     gap: 30px;
-    
+    flex-wrap: wrap;
     margin: 0;
     margin-right: 40px;
     padding: 0;
     list-style: none;
-    width: 560px;
+    max-width: 990px;;
 
 }
 
@@ -442,6 +442,7 @@ body {
     justify-content: space-between;
     
     
+    
 }
 
 .contacts-content {
@@ -522,6 +523,7 @@ body {
     font-size: 10px;
     line-height: 12px;
     padding: 60px 0;
+    
 }
 
 .footer-container {
@@ -588,6 +590,17 @@ body {
   
 
 }
+
+.footer-navigation-item a:hover {
+    opacity: 0.5;
+
+}
+
+.footer-navigation-item a:active {
+    opacity: 0.3;
+
+}
+
 
 .copyright {
     margin: 0;
