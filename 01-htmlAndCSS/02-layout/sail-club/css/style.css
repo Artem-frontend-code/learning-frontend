@@ -103,6 +103,19 @@ body {
     margin-bottom: 120px;
 }
 
+.yacht-rent h2 {
+    margin: 0;
+    margin-bottom: 55px;
+    text-decoration: underline;
+    text-decoration-color:#00C6BD;
+    text-decoration-thickness: 2px;
+    text-underline-position: under;
+    text-underline-offset: 15px;
+    font-size: 24px;
+    line-height: 34px;
+
+}
+
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -120,8 +133,14 @@ body {
     
 }
 
+.card-img {
+    display: block;
+    margin-bottom: 21px;
+}
+
 .card-title {  
     margin:0;
+    margin-bottom: 18px;
     font-weight: 700;
     font-size: 20px;
     line-height: 23px;
@@ -129,19 +148,37 @@ body {
 
 .card-description {
     margin: 0;
+    margin-bottom: 15px;
     font-size: 14px;
     line-height: 24px;
 }
 
 .card-features { 
+    list-style-type: disc;
     margin: 0;  
+    margin-bottom: 29px;
+    margin-left: 18px;
     padding: 0;
     font-size: 14px;
     line-height: 19px;
 }
 
+.card-features li {
+    margin-bottom: 4px;
+}
+
+.card-features li:last-child {
+    margin-bottom: 0;
+}
+
 .price {
+    display: flex;
     margin: 0;
+    
+}
+
+.price-count {
+    margin-left: auto;
 }
 
 .card span {
