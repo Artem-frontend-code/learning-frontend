@@ -1,6 +1,7 @@
 .card {
   width: 540px;
-  background-color: pink;
+  background-color: rgb(202, 202, 202);
+  color: black;
   padding: 20px;
   display: grid;
   grid-template-columns: 260px 165px 75px;
@@ -8,6 +9,20 @@
                        "options description description"
                        "options disclaimer disclaimer";
   gap: 20px;
+}
+
+.card-black {
+  width: 540px;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 260px 165px 75px;
+  grid-template-areas: "title title price"
+                       "options description description"
+                       "options disclaimer disclaimer";
+  gap: 20px;
+
 }
 
 .title {
