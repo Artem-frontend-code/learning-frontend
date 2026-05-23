@@ -1,3 +1,15 @@
+body.blackBody{
+  color: white;
+  background-color: black !important;
+}
+
+body.whiteBody {
+  color:black;
+  background-color: white;
+}
+
+
+
 .card {
   width: 540px;
   background-color: rgb(202, 202, 202);
@@ -10,6 +22,11 @@
                        "options disclaimer disclaimer";
   gap: 20px;
 }
+
+
+
+
+
 
 .card-black {
   width: 540px;

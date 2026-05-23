@@ -1,5 +1,6 @@
 let switchTheme = document.querySelector(".switch-theme");
 let card = document.querySelector(".card");
+let body
 switchTheme.onclick = function () {
     if (switchTheme.classList.contains('black')) {
         card.classList.add('card-black');
