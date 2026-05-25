@@ -1,6 +1,12 @@
 let switchTheme = document.querySelector(".switch-theme");
 let card = document.querySelector(".card");
-let body
+
+
+
+let button = document.querySelector(".submit-button");
+let textArea = document.querySelector(".comment");
+let list = document.querySelector(".comment-list");
+
 switchTheme.onclick = function () {
     if (switchTheme.classList.contains('black')) {
         card.classList.add('card-black');
@@ -15,4 +21,15 @@ switchTheme.onclick = function () {
 
     }
 
+}
+
+let form = document.querySelector(".comment-form");
+
+form.onsubmit = function (evt) {
+    evt.preventDefault();
+
+    let newComment = document.createElement('li');
+    newComment.textContent = comment.value;
+    list.append(newComment);
+    textArea.value= '';
 }
