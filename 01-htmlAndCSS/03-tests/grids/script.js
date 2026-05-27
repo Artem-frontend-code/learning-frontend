@@ -33,3 +33,5 @@ form.onsubmit = function (evt) {
     list.append(newComment);
     textArea.value= '';
 }
+
+let pizdec;
