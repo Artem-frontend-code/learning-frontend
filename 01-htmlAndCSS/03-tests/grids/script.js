@@ -35,4 +35,4 @@ form.onsubmit = function (evt) {
 }
 
 let pizdec;
-let gg;
+let prostite; 
