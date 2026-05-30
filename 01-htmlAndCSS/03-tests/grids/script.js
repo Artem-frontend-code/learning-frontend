@@ -1,6 +1,6 @@
 let switchTheme = document.querySelector(".switch-theme");
 let card = document.querySelector(".card");
-
+let globalSwitch = document.querySelector(".globalSwitch");
 
 
 let button = document.querySelector(".submit-button");
@@ -25,14 +25,16 @@ switchTheme.onclick = function () {
 
 let form = document.querySelector(".comment-form");
 
-form.onsubmit = function (evt) {
-    evt.preventDefault();
 
-    let newComment = document.createElement('li');
-    newComment.textContent = comment.value;
-    list.append(newComment);
-    textArea.value= '';
+
+globalSwitch.onclick = function () {
+    if (document.body.classList.contains("blackBody")) {
+        document.body.classList.remove("blackBody");
+        document.body.classList.add("whiteBody");
+    } else {
+        document.body.classList.remove("whiteBody");
+        document.body.classList.add("blackBody");
+    }
+    
+
 }
-
-let pizdec;
-let prostite; 

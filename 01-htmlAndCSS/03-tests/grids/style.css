@@ -1,9 +1,9 @@
-body.blackBody{
+.blackBody{
   color: white;
-  background-color: black !important;
+  background-color: black ;
 }
 
-body.whiteBody {
+.whiteBody {
   color:black;
   background-color: white;
 }
