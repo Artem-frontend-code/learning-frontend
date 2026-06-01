@@ -33,3 +33,50 @@ buttonSerif.onclick = function () {
 
 
 //Скрывание и раскрывание статей
+
+let blogs = document.querySelectorAll('.blog-article');
+
+
+for (let blog of blogs) {
+    let more = blog.querySelector('.more');
+    more.onclick = function () {
+        blog.classList.remove('short');
+    }
+    
+}
+
+
+//Раскладка карточек
+let cards = document.querySelector('.cards');
+let buttonGrid = document.querySelector('.card-view-button-grid');
+let buttonList = document.querySelector('.card-view-button-list');
+
+buttonGrid.onclick = function () {
+    buttonGrid.classList.add('active');
+    buttonList.classList.remove('active');
+    cards.classList.remove('list');
+}
+
+buttonList.onclick = function () {
+    buttonList.classList.add('active');
+    buttonGrid.classList.remove('active');
+    cards.classList.add('list');
+}
+
+//Галерея
+let mainPhoto = document.querySelector('.active-photo');
+let gallery = document.querySelector('.gallery');
+let items = gallery.querySelectorAll('a');
+
+
+for (let activeItem of items) {
+    activeItem.onclick = function (evt) {
+        evt.preventDefault();
+        mainPhoto.src = activeItem.href;
+        let currentActiveItem = gallery.querySelector('.active-item');
+        currentActiveItem.classList.remove('active-item');
+        activeItem.classList.add('active-item');
+
+
+    }
+}
