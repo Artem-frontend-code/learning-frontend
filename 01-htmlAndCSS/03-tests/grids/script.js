@@ -23,11 +23,8 @@ switchTheme.onclick = function () {
 
 }
 
-let form = document.querySelector(".comment-form");
-
-
-
-globalSwitch.onclick = function () {
+globalSwitch.addEventListener('click', function () {
+    
     if (document.body.classList.contains("blackBody")) {
         document.body.classList.remove("blackBody");
         document.body.classList.add("whiteBody");
@@ -37,4 +34,5 @@ globalSwitch.onclick = function () {
     }
     
 
-}
+});
+
