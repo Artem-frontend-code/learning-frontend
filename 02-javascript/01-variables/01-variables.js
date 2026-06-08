@@ -1,4 +1,10 @@
 // ======ПЕРЕМЕННЫЕ=====
+for (var i =0; i<10; i++) {
+    
+}
+console.log(i);
+
+
 
 //let объявляет переменную
 let userName="Artem"; //string тип
