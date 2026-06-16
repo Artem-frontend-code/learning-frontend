@@ -85,3 +85,16 @@ let getPrice = function (time, isSrochno) {
   return time * bet
 }
 
+
+let getProfitableProject = function (time, price) {
+  let srocnho = getPrice(time,true)-price;
+  let neSrocnho =  getPrice(time,false);
+  if (srocnho < neSrocnho) {
+    return 'Выгодней срочный проект. Потратишь на него ' + srocnho;
+  } else {
+    return 'Выгодней обычный проект. Потратишь на него ' + neSrocnho;
+  }
+}
+
+console.log(getProfitableProject(200,20000));
+
