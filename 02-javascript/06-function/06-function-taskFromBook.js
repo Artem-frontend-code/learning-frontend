@@ -7,3 +7,45 @@ function minNum (num1, num2) {
     }
 }
 console.log(minNum(10,100));
+
+//Задание 2 - рекурсия 
+function isEven (num) {
+    if (num === 0) {
+        return true;
+    } else if (num === 1) {
+        return false;
+    } else if (num >= 0) {
+        return isEven(num-2);
+    } else {
+        return isEven(num+2);
+    }
+}
+console.log(isEven(50));
+console.log(isEven(75));
+console.log(isEven(-1));
+
+//Задание 3 - подсчет букв
+
+function countBs (string) {
+    let count = 0;
+    for(let i = 0; i < string.length; i++) {
+        if (string[i] === "B") {
+            count++;
+        }
+    }
+    return console.log(count);
+}
+
+countBs("BaaBaB");
+
+function countChar (string, char) {
+    let count = 0;
+    for(let i = 0; i < string.length; i++) {
+        if (string[i] === char) {
+            count++;
+        }
+    }
+    return console.log(count);
+}
+
+countChar("AAssSSS", "A")
