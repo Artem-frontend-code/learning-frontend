@@ -72,7 +72,8 @@ const calori = () => {
 alert( calori() );
 */
 
-// ставка в час если срочно или не срочный проект
+// ставка в час если срочно или не срочный проект - Задание с курса
+/*
 let getPrice = function (time, isSrochno) {
   let bet = 1500;
   if (isSrochno === true) {
@@ -97,4 +98,23 @@ let getProfitableProject = function (time, price) {
 }
 
 console.log(getProfitableProject(200,20000));
+*/
 
+//Попробую сделать функцию с замыканиями 
+
+function countPow (num) {
+    return number = x => {
+        let i = num;
+        let b = 1;
+        while (i > 0) {
+            b *= x;
+            i--;
+            
+        }
+        return b;
+
+    } 
+}
+
+let twice = countPow(2);
+console.log(twice(10));
