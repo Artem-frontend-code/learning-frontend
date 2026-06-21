@@ -118,3 +118,4 @@ function countPow (num) {
 
 let twice = countPow(2);
 console.log(twice(10));
+//Отдыыых
