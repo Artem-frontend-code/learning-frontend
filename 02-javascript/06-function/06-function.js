@@ -116,7 +116,7 @@ function countPow (num) {
     } 
 }
 
-let twice = countPow(2);
-console.log(twice(10));
+let triple = countPow(3);
+console.log(triple(2));
 //Отдыыых, простите дела были
 //blyyyyy
