@@ -118,5 +118,4 @@ function countPow (num) {
 
 let triple = countPow(3);
 console.log(triple(2));
-//Отдыыых, простите дела были
-//blyyyyy
+//я изменяю свой распорядок дня
