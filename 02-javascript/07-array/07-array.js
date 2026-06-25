@@ -97,6 +97,17 @@ console.log(usersByDay);
 //indexOf и include 
 console.log(usersByDay.indexOf(5));
 
+let getDocumentsNumbers = function (name, year) {
+  let count = 0;
+  for (let i = 0; i < name.length; i++) {
+    if (name[i].indexOf(year,4) > 0) {
+      count++;
+      }
+  }
+  return count;
+}
+console.log("Документов",getDocumentsNumbers(["01112018","20092017","05102017","12052018","04072005","02022018"],2018));
+
 //find
 console.log(usersByDay.find(item => item === 4));
 
