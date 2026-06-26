@@ -124,3 +124,14 @@ for (let i of first) {
 
 }
 
+
+//Задание с числами Фибоначчи
+let fibonacciNumbers = [1, 1];
+let numbersQuantity = 7;
+for (let i = 0; i< numbersQuantity; i++) {
+  num = fibonacciNumbers[i] + fibonacciNumbers[i+1];
+  fibonacciNumbers.push(num);
+
+}
+console.log(fibonacciNumbers);
+
