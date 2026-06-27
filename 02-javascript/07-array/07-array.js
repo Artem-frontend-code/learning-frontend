@@ -124,6 +124,11 @@ for (let i of first) {
 
 }
 
+//concat 
+let oneArr = [2,3];
+let twoArr = ["6", 6];
+console.log(oneArr.concat(7));
+
 
 //Задание с числами Фибоначчи
 let fibonacciNumbers = [1, 1];
