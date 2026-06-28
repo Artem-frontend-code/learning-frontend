@@ -129,7 +129,23 @@ let oneArr = [2,3];
 let twoArr = ["6", 6];
 console.log(oneArr.concat(7));
 
-
+//многоточие в функциях или массивах
+let smallArr = [5,9,8,3,10];
+console.log(Math.max(5,4,8,9));
+//развертывает массив
+console.log([5,6,...smallArr,666]);
+//принимает любое количество цифр и упаковывает их в массив
+function max (...numbers) {
+    let i = -Infinity;
+    //of дает значение сразу
+    for (let x of numbers) {
+      if (x > i) {
+        i = x;
+      }
+    }
+    return i;
+}
+console.log(max(11,5,88,0,99));
 //Задание с числами Фибоначчи
 let fibonacciNumbers = [1, 1];
 let numbersQuantity = 7;

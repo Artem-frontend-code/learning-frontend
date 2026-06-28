@@ -70,3 +70,21 @@ console.log(users);
 
 
 
+//=== Объект Math ===
+console.log(Math.max(5,19,90), "max number");
+console.log(Math.min(5,19,90), "min number");
+console.log(Math.sqrt(25), "корень числа");
+console.log(Math.PI);
+//a также sin, cos, asin ,acos ,tan ,atan
+//random
+console.log(Math.random());
+
+//Math.floor округление в меньшую сторону
+let a = 24.66;
+console.log(Math.floor(a));
+//Math ceil округление в большую сторону
+console.log(Math.ceil(a));
+//Math.round округления до ближайшего целого
+console.log(Math.round(a));
+//абсолютное значение, делает любое число положительным
+console.log(Math.abs(-100));
