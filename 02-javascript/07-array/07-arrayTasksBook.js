@@ -20,3 +20,5 @@ const sum = function (numbers) {
     return sumNumbers;
 }
 console.log(range(10,1,-1));
+
+//отдыхаю но может быть задание загружу седня
