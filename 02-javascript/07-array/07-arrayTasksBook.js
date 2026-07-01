@@ -50,3 +50,14 @@ function reverseArrayInPlace (array) {
     }
 
     console.log(reverseArrayInPlace([1,2,3,4,5,6,7,8]));
+
+//Список
+function arrayToList (array) {
+    let list = {value:array[array.length-1], rest:null};
+    for (let i = array.length-2; i >= 0; i--) {
+        list = {value:array[i], rest:list};
+    }
+    return list;
+}
+console.log(arrayToList([1,2,3]))
+console.log(arrayToList([1,2,3]))
