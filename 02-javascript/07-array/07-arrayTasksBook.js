@@ -56,8 +56,20 @@ function arrayToList (array) {
     let list = {value:array[array.length-1], rest:null};
     for (let i = array.length-2; i >= 0; i--) {
         list = {value:array[i], rest:list};
+       
     }
     return list;
 }
+
+let listik = arrayToList([1,2,3]);
+
+function  listToArray (list) {
+    let array = [];
+    for (node=list; node; node = node.rest) {
+        array.push(node.value);
+    }
+    return array;
+}
+console.log(listToArray(listik));
 console.log(arrayToList([1,2,3]))
 console.log(arrayToList([1,2,3]))
