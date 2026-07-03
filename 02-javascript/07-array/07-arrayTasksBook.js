@@ -70,6 +70,16 @@ function  listToArray (list) {
     }
     return array;
 }
+
+function prepend (elem, list) {
+    list = {value:elem, rest:list};
+    return list;
+
+}
 console.log(listToArray(listik));
 console.log(arrayToList([1,2,3]))
+console.log(prepend(5,listik));
+
+
+
 console.log(arrayToList([1,2,3]))
