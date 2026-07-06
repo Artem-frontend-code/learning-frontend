@@ -78,7 +78,7 @@ function prepend (elem, list) {
 }
 console.log(listToArray(listik));
 console.log(arrayToList([1,2,3]))//
-//заработал и стало мне еще хуже
+//i hate my life 
 
 
 
