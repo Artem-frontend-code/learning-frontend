@@ -31,6 +31,16 @@
                 <label><input type="radio" name="question" value="no">НЕТ!??</label>
 
             </form>
+            <select name="theme[]" multiple>
+                <option value="light">Светлая тема йоу</option>
+                <option value="dark" selected>Тёмная тема бро</option>
+            </select>
+            <form  method="post" enctype="multipart/form-data">
+            
+                <input type="file" name="avatar">
+                <input type="hidden" name="account_number" value="15">
+                <input type="submit" value="Загрузить">
+        </form>
         </main>
     </body>
 </html>
