@@ -9,7 +9,7 @@
                 <label for="message-field">
                     Привет хозяин
                 </label>
-                <input type="text" name="message" value="отправь сообщение пожалуйстаа" id="message-field">
+                <input type="text" name="message" value="отправь сообщение пожалуйстаа" id="message-field" required>
                 <br>
                 <label for="password-field">Введи пароль чтобы увидеть меня в душе</label>
                 <input type="password" id="password-field" name="password">
@@ -25,7 +25,7 @@
                 <input type="checkbox" name="loveMe">Ты меня любишь?
                 </label>
                 <p>Ты меня точно любишь?</p>
-                <label><input type="radio" name="question" value="yes">Да</label>
+                <label><input type="radio" name="question" value="yes" autofocus>Да</label>
                 <br>
                 <label><input type="radio" name="question" value="no">НЕТ!??</label>
                 <br>
@@ -45,13 +45,48 @@
                 <option value="light">Светлая тема йоу</option>
                 <option value="dark" selected>Тёмная тема бро</option>
             </select>
-            <form  method="post" enctype="multipart/form-data">
+            <form  method="post" enctype="multipart/form-data" oninput="sumout.value=sumcout.value">
             
                 <input type="file" name="avatar">
+                <br>
                 <input type="hidden" name="account_number" value="15">
+                <br>
                 <input type="submit" value="Загрузить">
+                <br>
                 <input type="button" value="котел чиню">
-        </form>
+                <br>
+                <input type="date" name="date">
+                <br>
+                <input type="datetime-local">
+                <br>
+                <input type="time" name="time">
+                <br>
+                <fieldset>
+                    <legend>не поддерживает файерфокс</legend>
+                <!-- но мой файерфокс не поддерживает вот до сюда-->
+                <input type="week">
+                <br>
+                <input type="month">
+                <br>
+                <!---->
+                </fieldset>
+                <input type="text" list="food" name="food-favorite">
+                <datalist id="food">
+                    <option value="Борщ"></option>
+                    <option value="Суши"></option>
+                    <option value="Пицца"></option>
+                </datalist>
+                <br>
+                <input type="number" min="10">
+                <br>
+                <input type="search" id="search" name="search">
+                <br>
+                <input type="range" step="2" max="100" name="sumcout">
+                <output name="sumout"></output>
+                <br>
+                Телефон
+                <input type="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="формат x-xxx-xxx"required>
+            </form>
         </main>
 
     </body>
