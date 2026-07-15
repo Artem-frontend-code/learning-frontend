@@ -70,6 +70,7 @@
                 <br>
                 <!---->
                 </fieldset>
+                <legend>Еда и даталист еды</legend>
                 <input type="text" list="food" name="food-favorite">
                 <datalist id="food">
                     <option value="Борщ"></option>
@@ -77,15 +78,40 @@
                     <option value="Пицца"></option>
                 </datalist>
                 <br>
+                Номер
                 <input type="number" min="10">
                 <br>
+                Поиск
                 <input type="search" id="search" name="search">
                 <br>
+                Диапазон 
                 <input type="range" step="2" max="100" name="sumcout">
                 <output name="sumout"></output>
                 <br>
                 Телефон
                 <input type="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="формат x-xxx-xxx"required>
+                <br>
+                Почта
+                <input type="email" autocomplete="on"> <!-- автозаполнение поля-->
+                <br>
+                Сайт
+                <input type="url">
+                <br>
+                Цвет
+                <input type="color">
+                <br>
+                <select multiple>
+                    <optgroup label="игры">
+                        <option value="dota2">Dota 2</option>
+                        <option value="CSGO2">CS GO 2</option>
+                    </optgroup>
+                    <optgroup label="music">
+                        <option value="jazz">Джаз</option>
+                    </optgroup>
+                </select>
+                <!-- readonly не дает ничего менять, но отправляет данные на сервер
+                 disabled не дает ничего менять и копироватть и не отправляет данные на сервер-->
+                 <!-- tabindex изменяет порядок элементов, и при нажатии tab по указанному порядку пойдет-->
             </form>
         </main>
 
