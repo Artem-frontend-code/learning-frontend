@@ -65,7 +65,7 @@ let listik = arrayToList([1,2,3]);
 
 function  listToArray (list) {
     let array = [];
-    for (node=list; node; node = node.rest) {
+    for (let node=list; node; node = node.rest) {
         array.push(node.value);
     }
     return array;
@@ -76,11 +76,48 @@ function prepend (elem, list) {
     return list;
 
 }
+
+function nth (list,num) {
+    if (num > 0) {
+    return nth(list.rest, --num);
+    } else {
+        return list.value;
+    }
+    
+}
+
 console.log(listToArray(listik));
 console.log(arrayToList([1,2,3]))//
-//урааааа
+console.log(nth(listik, 2));
+//Глубокое сравнение
+function deepEqual (arg1, arg2) {
+    if (arg1 === null && arg2 === null){
+        return true;
+    } else if (arg1 === null || arg2 === null) {
+        return false;
+    }
+    else if (typeof(arg1) != "object" && typeof(arg2) != "object") {
+        return arg1 === arg2;
+    } else if (typeof(arg1) === "object" && typeof(arg2) === "object") {
+        const keys1 = Object.keys(arg1);
+        const keys2 = Object.keys(arg2);
+        if (keys1.length === keys2.length) {
+             for (let i = 0; i < keys1.length; i++){
+            if (keys1[i] !== keys2[i] || deepEqual(arg1[keys1[i]], arg2[keys2[i]]) === false) {
+                return false;
+            }
+        }
+        return true;
+        } else {
+            return false;
+        }
+       
+    } else {
+        return false;
+    }
 
+}
 
-
+console.log(deepEqual(4,6));
 
 console.log(arrayToList([1,2,3]))
