@@ -49,3 +49,9 @@ function countChar (string, char) {
 }
 
 countChar("AAssSSS", "A")
+
+//Пока начну делать задания, а потом буду разбираться в книге этой
+//Высшие функции
+//Глава 5 - задание 1
+let testArray = [[1,4,6],[7,10,24],[55,1,3]];
+console.log(testArray.reduce((a,b) => a.concat(b)));

@@ -129,6 +129,9 @@ let oneArr = [2,3];
 let twoArr = ["6", 6];
 console.log(oneArr.concat(7));
 
+//reduce
+console.log([1,2,3,4].reduce((a,b) => a*b));
+
 //многоточие в функциях или массивах
 let smallArr = [5,9,8,3,10];
 console.log(Math.max(5,4,8,9));

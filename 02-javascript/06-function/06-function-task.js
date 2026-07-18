@@ -65,13 +65,14 @@ function operation (nameOperation) {
 }
 let ok = operation("умножение");
 console.log("1 programm:",ok(5,5));
-//
+// 2 - ну просто счетчик
 function plusStep (step) {
     let i = 0;
     return m => i+=step;
 
 }
 let five = plusStep(5);
+console.log("2 programm",five());
 console.log(five());
 console.log(five());
-console.log(five());
+//3 - что то покруче
