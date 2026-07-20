@@ -58,7 +58,9 @@ console.log(testArray.reduce((a,b) => a.concat(b)));
 //Задание 2
 // z jnls[f. vyt gj[eq z pft,fkcz]]
 function loop(value,condition, changeValue, bodyLoop) {
-    for (let value; condition; changeValue) {
-        bodyLoop;
+    for (value; condition(value); value=changeValue(value)) {
+        bodyLoop(value);
     }
+
 }
+loop( 3, (value) => value < 10, (value) => ++value, (value) => console.log(value));
