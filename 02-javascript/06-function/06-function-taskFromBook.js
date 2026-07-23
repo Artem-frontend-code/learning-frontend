@@ -64,4 +64,3 @@ function loop(value,condition, changeValue, bodyLoop) {
 
 }
 loop( 3, (value) => value < 10, (value) => ++value, (value) => console.log(value));
-//gdgdgffdgddjfdjfd
