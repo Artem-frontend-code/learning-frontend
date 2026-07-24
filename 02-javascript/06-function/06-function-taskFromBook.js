@@ -56,7 +56,7 @@ countChar("AAssSSS", "A")
 let testArray = [[1,4,6],[7,10,24],[55,1,3]];
 console.log(testArray.reduce((a,b) => a.concat(b)));
 //Задание 2
-// z jnls[f. vyt gj[eq z pft,fkcz]]
+
 function loop(value,condition, changeValue, bodyLoop) {
     for (value; condition(value); value=changeValue(value)) {
         bodyLoop(value);
