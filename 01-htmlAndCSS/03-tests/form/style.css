@@ -1,0 +1,15 @@
+/* Прохожу сегодня пвсевдоклассы*/
+input:nth-child(1) {
+    background-color: brown;
+}
+
+input:nth-of-type(1) {
+    background-color: brown;
+}
+
+/* nth-child самый первый родителя не учитывает тег*/
+
+input:first-of-type{
+    background-color: red;
+}
+/*еще есть not как ! в js*/
