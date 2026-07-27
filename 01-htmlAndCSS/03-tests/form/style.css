@@ -13,3 +13,13 @@ input:first-of-type{
     background-color: red;
 }
 /*еще есть not как ! в js*/
+/* empty, only-child */
+
+/*Псевдоэлементы*/
+
+/* 
+::first-line, ::first-letter
+::before, ::after
+*/
+
+
