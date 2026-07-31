@@ -64,3 +64,52 @@ function loop(value,condition, changeValue, bodyLoop) {
 
 }
 loop( 3, (value) => value < 10, (value) => ++value, (value) => console.log(value));
+
+
+function myEvery (arr, userFunc) {
+    let b = 0;
+    for (let i = 0; i < arr.length; i++) {
+        
+        if(userFunc(arr[i])) {
+            b++;
+        }
+    }
+    if (b === arr.length) {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
+
+}
+
+myEvery([1,2,-1], n => n > 0);
+
+function myEverySome (arr, userFunc) {
+    if (arr.some(m =>!userFunc(m))) {
+        console.log(false);
+    } else {
+        console.log(true);
+    }
+
+}
+
+myEverySome([1,2,-5], n => n > 0);
+
+//снизу задание пришлось к сожалению списать, потом буду разбиратсья кое каким способом, а код потом рабочим сделаю с новым функциями
+/*
+function dominantDirection(text) {
+  let counted = countBy(text, char => {
+    let script = characterScript(char.codePointAt(0));
+    return script ? script.direction : "none";
+  }).filter(({name}) => name != "none");
+
+  if (counted.length == 0) return "ltr";
+
+  return counted.reduce((a, b) => a.count > b.count ? a : b).name;
+}
+
+console.log(dominantDirection("Hello!"));
+// → ltr
+console.log(dominantDirection("Hey, مساء الخير"));
+// → rtl
+*/
