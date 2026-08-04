@@ -151,3 +151,5 @@ function countBy (items, groupName) {
 
 
  console.log(dominantDirection("Hello  Сучка"));
+
+ //hfghfgh
