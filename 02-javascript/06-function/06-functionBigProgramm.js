@@ -104,29 +104,20 @@ const SCRIPTS = [
 ];
 
 function characterScript (code) {
-  for (let elem of SCRIPTS) {
-    
-    for (let range of elem.ranges) {
+  return SCRIPTS.find(elem => {
+    return elem.ranges.some(range => {
       const [from,to] = range;
-      if (code >= from && code < to) {
-        return elem;
-      } 
-    }
-    
-  }
-  return null;
+      return code >= from && code < to;
+    })
+  });
 }
 
 function countBy (items, groupName) {
-  let groups = {}
-  for (let elem of items) {
+  let groups = items.reduce((groups, elem) => {
     let name = groupName(elem);
-    if (groups[name] === undefined) {
-      groups[name] = 1;
-    } else {
-      groups[name]++;
-    }
-  }
+    groups[name] === undefined ? groups[name] = 1 : groups[name]++;
+    return groups;
+  }, {});
 
   let results = [];
   for (let key in groups) {
@@ -136,20 +127,23 @@ function countBy (items, groupName) {
 }
 
  function dominantDirection(text) {
-    let counted = countBy(text, char => {
+    let counted = countBy([...text], char => {
       let script = characterScript(char.codePointAt(0));
       return script ? script.direction : "none";
     });
-    let dominant = null;
-    for (let elem of counted) {
+
+    let dominant = counted.reduce((dominant, elem) => {
       if ( dominant === null || elem.count > dominant.count) {
-        dominant = elem;
+        return elem;
+      } else {
+        return dominant;
       }
-    }
+    },null)
+
     return dominant.name;
  }
 
 
  console.log(dominantDirection("Hello  Сучка"));
 
- //hfghfgh
+
