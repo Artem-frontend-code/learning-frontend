@@ -1,59 +1,88 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Kablammo&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Недельный план</title>
     </head>
     <body>
         <header>
-            <h1>Недельный план</h1>
+            
         </header>
         <main>
+            
+            <div class="grid-container">
+            <h1 class="name">Weekly planer </h1>
             <section class="toDoList">
-            <h2>Список задач</h2>
+            <h2>To do list</h2>
             <ul class="todo-list">
-                <li class="todo-item">
-                    <label class="todo-checkbox-label">
-                        <input type="checkbox" class="todo-checkbox">
-                        <span class="custom-checkbox"></span>
-                    </label>
-                    <span class="todo-text">Купить молоко</span>
-                    <button type="button" class="delete-task">&#x2717;</button>
-                </li>
+                
             </ul>
+
+            <form id="todo-form">
+                <label class="form-label">
+                    <input type="text" id="todo-input" required placeholder="Что нужно сделать?">
+                    <button type="submit" class="todo-submit">Добавить</button>
+                </label>
+            </form>
+            
             </section>
 
-            <section class="shedule">
-                <h2>Расписание</h2>
+            <section class="schedule">
+                <h2>Schedule</h2>
                 <ul class="shedule-list">
-                    <li class="shedule-list-item">
-                        <h3>Понедельник</h3>
+                    <li class="schedule-list-item">
+                        <h3>Monday</h3>
+                        <textarea class="shedule-area"></textarea>
                     </li>
-                    <li class="shedule-list-item">
-                        <h3>Вторник</h3>
+                    <li class="schedule-list-item">
+                        <h3>Tuesday</h3>
+                        <textarea class="schedule-area"></textarea>
                     </li>
-                    <li class="shedule-list-item">
-                        <h3>Среда</h3>
+                    <li class="schedule-list-item">
+                        <h3>Wednesday</h3>
+                        <textarea class="schedule-area"></textarea>
                     </li>
-                    <li class="shedule-list-item">
-                        <h3>Четверг</h3>
+                    <li class="schedule-list-item">
+                        <h3>Thursday</h3>
+                        <textarea class="schedule-area"></textarea>
                     </li>
-                    <li class="shedule-list-item">
-                        <h3>Пятница</h3>
+                    <li class="schedule-list-item">
+                        <h3>Friday</h3>
+                        <textarea class="schedule-area"></textarea>
                     </li>
-                    <li class="shedule-list-item">
-                        <h3>Суббота</h3>
+                    <li class="schedule-list-item">
+                        <h3>Saturday</h3>
+                        <textarea class="schedule-area"></textarea>
                     </li>
-                    <li class="shedule-list-item">
-                        <h3>Воскресенье</h3>
+                    <li class="schedule-list-item">
+                        <h3>Sunday</h3>
+                        <textarea class="schedule-area"></textarea>
                     </li>
                 </ul>
             </section>
 
             <section class="note">
-                <h2>Заметки</h2>
+                <h2>Note</h2>
+                <textarea class="note-area"></textarea>
             </section>
+            </div>
         </main>
+        <template id="liTemplate">
+            <li class="todo-item">
+                    <label class="todo-checkbox-label">
+                        <input type="checkbox" class="todo-checkbox">
+                        <span class="custom-checkbox"></span>
+                    </label>
+                    <span class="todo-text"></span>
+                    <button type="button" class="delete-task">&#x2717;</button>
+                </li>
+        </template>
+
+        <script src="script.js"></script>
     </body>
 </html>
