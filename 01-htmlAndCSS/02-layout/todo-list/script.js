@@ -4,6 +4,9 @@ const input = document.getElementById("todo-input");
 const list = document.querySelector(".todo-list");
 const template = document.getElementById("liTemplate");
 const tasks = loadTodos();
+const all = document.querySelector(".all");
+const active = document.querySelector(".active");
+const done = document.querySelector(".done");
 
 function saveTodos(todos) {
     localStorage.setItem("todos", JSON.stringify(todos));
@@ -77,4 +80,34 @@ form.addEventListener("submit", function(event) {
     input.value="";
 });
 
+done.addEventListener("click", function() {
+    const completedTasks = tasks.filter(todo => todo.done === true);
+
+    while (list.firstChild) {
+    list.firstChild.remove();
+    }   
+    completedTasks.forEach(todo => {
+        renderTodo(todo);
+    });
+});
+
+active.addEventListener("click", function() {
+    const activeTasks = tasks.filter(todo => todo.done === false);
+
+    while (list.firstChild) {
+    list.firstChild.remove();
+    }   
+    activeTasks.forEach(todo => {
+        renderTodo(todo);
+    });
+});
+
+all.addEventListener("click", function() {
+    while (list.firstChild) {
+    list.firstChild.remove();
+    }   
+    tasks.forEach(todo => {
+        renderTodo(todo);
+    });
+});
 

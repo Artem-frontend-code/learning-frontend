@@ -84,6 +84,22 @@ h3, h2 {
     margin-bottom: 0;
 }
 
+.todo-sort {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-sort button {
+    font-family: "Kablammo";
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    
+}
+
 .schedule {
     grid-area: schedule;
 }
@@ -180,6 +196,7 @@ form {
     background-color: rgba(235, 217, 220);
     border: none;
     border-radius: 5px;
+    font-family: "Kablammo";
 }
 
 #todo-form button:hover {
