@@ -49,3 +49,4 @@ switch(i){
         console.log("ну ты даешь")
         break
 }
+//gfddfg
