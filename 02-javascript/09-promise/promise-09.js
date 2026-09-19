@@ -1,11 +1,12 @@
 
-/*
+
 function wait(ms) {
 return new Promise((resolve) => {
     setTimeout(resolve,ms);
 });
 }
 
+/*
 wait(0)
     .then (() => {
         console.log("3");
@@ -36,7 +37,19 @@ promise
     .then((result) => console.log(result))
     .catch((error) => console.log(error));
 */
+/*
 fetch("https://jsonplaceholder.typicode.com/todos/5")
     .then((response) => response.json())
     .then((data) => console.log(data.title))
     .catch((error) => console.log("Ошибка:", error));
+*/
+
+async function countdown() {
+    console.log("3");
+    await wait (1000);
+    console.log("2");
+    await wait (1000);
+    console.log("1");
+    console.log("старт");
+}
+countdown();
