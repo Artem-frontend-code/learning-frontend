@@ -152,20 +152,32 @@ function getShortId(shorts) {
 
 }
 
-getVideo(videos)
-    .then((videos) => {
-        const firstVideo = videos[idVideo];
-        return getDescription(firstVideo);
-    })
-    .then((description) => {
-        const author = description.author;
-        return getAuthorInfo(author);
-    })
-    .then((author) => {
-        const shorts = author.shorts;
-        return getShortId(shorts);
-    })
-    .then((short) => {
-        console.log(short)
-    });
+// getVideo(videos)
+//     .then((videos) => {
+//         const firstVideo = videos[idVideo];
+//         return getDescription(firstVideo);
+//     })
+//     .then((description) => {
+//         const author = description.author;
+//         return getAuthorInfo(author);
+//     })
+//     .then((author) => {
+//         const shorts = author.shorts;
+//         return getShortId(shorts);
+//     })
+//     .then((short) => {
+//         console.log(short)
+//     });
+
+async function run() {
+    const arrVideos = await getVideo(videos);
+    const firstVideo = videos[idVideo];
+    const description = await getDescription(firstVideo);
+    const author = await getAuthorInfo(description.author);
+    const short = await getShortId(author.shorts);
+    console.log(short.title);
+    console.log(short.id);
+    console.log(short.views);
+}
+run();
 
