@@ -104,6 +104,12 @@ const videos = [
     }
 ];
 
+const titles = videos.map((video) => video.title);
+const authorNames = videos.map((video) => video.description.author.name);
+const popularAuthors = videos.filter((video) => video.description.author.shorts.length > 2);
+const gameVideos = videos.filter((video) => video.description.hashTags.includes("игры"));
+console.log(gameVideos);
+
 //promise1 - запрос всех видео
 
 function getVideo(otherVideos) {
@@ -170,6 +176,9 @@ function getShortId(shorts) {
 //     });
 
 async function run() {
+    try {
+
+    
     const arrVideos = await getVideo(videos);
     const firstVideo = videos[idVideo];
     const description = await getDescription(firstVideo);
@@ -178,6 +187,9 @@ async function run() {
     console.log(short.title);
     console.log(short.id);
     console.log(short.views);
+    } catch {
+        console.log("Ошибка", error);
+    }
 }
 run();
 
