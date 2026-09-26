@@ -108,7 +108,7 @@ const titles = videos.map((video) => video.title);
 const authorNames = videos.map((video) => video.description.author.name);
 const popularAuthors = videos.filter((video) => video.description.author.shorts.length > 2);
 const gameVideos = videos.filter((video) => video.description.hashTags.includes("игры"));
-console.log(gameVideos);
+
 
 //promise1 - запрос всех видео
 
@@ -193,4 +193,4 @@ async function run() {
 }
 run();
 
-//hааа
+//ПРОСТИТЕ
