@@ -104,11 +104,31 @@ const videos = [
     }
 ];
 
+const videos2 = videos.map((video) => {
+
+    return video.id === 2 ? {...video, title:"обнаружен"} : video;
+
+});
+console.log(videos2);
+
+
+
 const titles = videos.map((video) => video.title);
 const authorNames = videos.map((video) => video.description.author.name);
 const popularAuthors = videos.filter((video) => video.description.author.shorts.length > 2);
 const gameVideos = videos.filter((video) => video.description.hashTags.includes("игры"));
+const videoStats = videos.map((video) => {
+    const totalViews = video.description.author.shorts.reduce((acc, short) => acc + short.views, 0);
+    return {
+        title: video.title,
+        totalViews,
+    };
+}
+);
 
+
+        
+console.log(videoStats.filter(({totalViews}) => totalViews > 3000).map(({title, totalViews}) =>  {return `${title}: ${totalViews}`} ));
 
 //promise1 - запрос всех видео
 
@@ -187,10 +207,10 @@ async function run() {
     console.log(short.title);
     console.log(short.id);
     console.log(short.views);
+    
     } catch {
         console.log("Ошибка", error);
     }
 }
 run();
 
-//ПРОСТИТЕ
