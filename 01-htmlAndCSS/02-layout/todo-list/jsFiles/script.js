@@ -1,3 +1,4 @@
+
 const form = document.getElementById("todo-form");
 const input = document.getElementById("todo-input");
 // deleteButton = document.querySelector("delete-task")
@@ -7,15 +8,29 @@ const tasks = loadTodos();
 const all = document.querySelector(".all");
 const active = document.querySelector(".active");
 const done = document.querySelector(".done");
+const clear = document.querySelector(".clear");
+import {saveTodos, loadTodos} from "./storage.js";
+let currentFilter = "all";
 
-function saveTodos(todos) {
-    localStorage.setItem("todos", JSON.stringify(todos));
+function clearList () {
+    while (list.firstChild) {
+    list.firstChild.remove();
+    }
 }
 
-function loadTodos() {
-    const raw = localStorage.getItem('todos');
-    if (!raw) return [];
-    return JSON.parse(raw);
+function render () {
+    
+    let tasksToShow;
+        if (currentFilter === "all") {
+            tasksToShow = tasks;
+        } else if (currentFilter === "active") {
+            tasksToShow = tasks.filter(({done}) => done === false);
+        } else if (currentFilter === "done") {
+            tasksToShow = tasks.filter(({done}) => done === true);
+        }
+        clearList();
+        tasksToShow.forEach(todo => renderTodo(todo));
+
 }
 
 function renderTodo (todo) {
@@ -46,17 +61,18 @@ function renderTodo (todo) {
     }
 
     checkbox.addEventListener("change", function() {
+        const index = tasks.findIndex(task => task.id === idTask);
         if(checkbox.checked) {
-            todoText.style.textDecoration = "line-through";
-            todoText.style.textDecorationThickness = "3px";
-            todo.done = true;
+            const updatedTodo = {...todo, done: true};
+            tasks.splice(index,1,updatedTodo);
             saveTodos(tasks);
         } else {
-            todoText.style.textDecoration = "none";
-            todo.done = false;
+            const updatedTodo = {...todo, done: false};
+            tasks.splice(index,1,updatedTodo);
             saveTodos(tasks);
         }
-        
+
+        render();
     })
 
 
@@ -69,6 +85,9 @@ tasks.forEach (todo => {
 form.addEventListener("submit", function(event) {
     event.preventDefault();
     const text = input.value.trim();
+    if (text === "") {
+        return;
+    }
     const todo = {id: Date.now(),
         text: text,
         done:false,};
@@ -81,34 +100,26 @@ form.addEventListener("submit", function(event) {
 });
 
 done.addEventListener("click", function() {
-    const completedTasks = tasks.filter(todo => todo.done === true);
-
-    while (list.firstChild) {
-    list.firstChild.remove();
-    }   
-    completedTasks.forEach(todo => {
-        renderTodo(todo);
-    });
+    currentFilter = "done";
+    render();
 });
 
 active.addEventListener("click", function() {
-    const activeTasks = tasks.filter(todo => todo.done === false);
-
-    while (list.firstChild) {
-    list.firstChild.remove();
-    }   
-    activeTasks.forEach(todo => {
-        renderTodo(todo);
-    });
+    currentFilter = "active";
+    render();
 });
 
 all.addEventListener("click", function() {
-    while (list.firstChild) {
-    list.firstChild.remove();
-    }   
-    tasks.forEach(todo => {
-        renderTodo(todo);
-    });
+    currentFilter = "all";
+    render();
+
 });
 
-//fghfgh
+clear.addEventListener("click", function() {
+    const filtered = tasks.filter((task) => task.done === false);
+    tasks.splice(0,tasks.length, ...filtered);
+    saveTodos(tasks);
+    render();
+
+});
+
