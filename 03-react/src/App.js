@@ -6,8 +6,6 @@ import PostForm from "./components/PostForm";
 import PostFilter from "./components/PostFilter";
 import "./styles/App.css";
 import MyButton from "./components/UI/button/MyButton";
-import MyInput from "./components/UI/input/MyInput";
-import MySelect from "./components/UI/select/MySelect";
 import MyModal from "./components/UI/MyModal/MyModal";
 function App() {
   const [posts, setPosts] = useState([
@@ -59,11 +57,6 @@ function App() {
 
       <PostList remove = {removePost} posts={sortedAndSearchedPosts} title="Языки программирования"/> 
       
-      
-      
-      
-      
-
     </div>
   );
 }
