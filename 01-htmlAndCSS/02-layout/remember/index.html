@@ -1,22 +1,71 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Я вспомню все</title>
-    </head>
 
-    <body>
-        <h1>Все про меня и мою одержимость</h1>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Я вспомню все</title>
+    <link rel="stylesheet" href="styles/style.css">
 
-        <h2>Обо мне</h2>
-        <img src="src/images.jpg" alt="канеки кен">
-        <p>Пытаюсь стать <em>фронтенд</em> разработчиком, повторяю js/css/html, <em>тону</em> в своих тревогах и попытках стать дисциплинированным. Надеюсь этот простой сайт <em>изменит</em> мою жизнь. Я <em>стану</em> лучше, я <em>буду</em> лучше</p>
-        <h2>Моя одержимость</h2>
-        <p>Я всю жизнь пытаюсь программировать, постоянно связывал свою жизнь с айти. Всю жизнь играю в игры и пытаюсь найти любовь, но сейчас <strong>я люблю только Василису</strong>(<a href="obsession.html" target="_blank" rel="noopener noreferer">Вот она кстати</a>), игры и программирование. Я <strong>одержим</strong> всем этим и надеюсь буду одержим вечно, пока меня не сожрут мысли</p>
-        <h2>Мои проекты</h2>
-        <p>Создал сайт на чисто html и CSS, потом доработал его функциями на JS.</p>
-        <p>Создал toDo list используя свой максимум JS.</p>
-        <p>По гайду сделал небольшое реакт приложение</p>
-    </body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav">
+            <img src="src/Dota-2-simplified-logo.svg.webp" width="50" height="50" alt="логотип доты" class="logo-nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#proj">Проекты</a></li>
+                <li class="nav__item"><a href="#obs">Одержимость</a></li>
+                <li class="nav__item"><a href="#cont">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="main-title">Все про меня и мою одержимость</h1>
+
+        <section class="about-me">
+            <img src="src/images.jpg" alt="канеки кен" title="канеки кен" width="480" height="640">
+            <div class="about-me-text">
+                <h2>Обо мне</h2>
+                <p>Пытаюсь стать <em>фронтенд</em> разработчиком, повторяю js/css/html, <em>тону</em> в своих тревогах и
+                    попытках стать дисциплинированным. Надеюсь этот простой сайт <em>изменит</em> мою жизнь.</p>
+                <blockquote>
+                    <p>Я <em>стану</em> лучше, я <em>буду</em> лучше.</p>
+                    <footer>"Мое эго"</footer>
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="my-obsession" id="obs">
+            <h2>Моя одержимость</h2>
+            <p>Я всю жизнь пытаюсь программировать, постоянно связывал свою жизнь с айти. Всю жизнь играю в игры и
+                пытаюсь найти любовь, но сейчас <strong>я люблю только Василису</strong>(<a href="obsession.html"
+                    target="_blank" rel="noopener noreferrer">Вот она кстати</a>), игры и программирование. Я
+                <strong>одержим</strong> всем этим и надеюсь буду одержим вечно, пока меня не сожрут мысли
+            </p>
+        </section>
+        <section class="my-projects" id="proj">
+            <h2>Мои проекты</h2>
+            <ul>
+                <li>Создал сайт на чисто html и CSS, потом доработал его функциями на JS.</li>
+                <li>Создал toDo list используя свой максимум JS.</li>
+                <li>По гайду сделал небольшое реакт приложение</li>
+            </ul>
+        </section>
+
+    </main>
+    <footer>
+        <ul class="footer__list" id="cont">
+            <li class="footer__item">Мой телеграм канал</li>
+            <li class="footer__item">Мой гитхаб</li>
+            <li class="footer__item">Мое вдохновение</li>
+        </ul>
+    </footer>
+</body>
+
 </html>
