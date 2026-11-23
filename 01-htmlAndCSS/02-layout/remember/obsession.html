@@ -14,12 +14,57 @@
 
 <body>
     <main class="main-my-girl">
-        <h1>Моя принцесса</h1>
-        <video style="transform: rotate(-90deg);" autoplay muted controls playsinline loop>
-            <source src="src/IMG_4089.mp4" type="video/mp4">
-        </video>
-        <h2><span>Я люблю тебя</span></h2>
+
+        <seaction class="main-video">
+            <h1>Моя принцесса</h1>
+            <video style="transform: rotate(-90deg);" autoplay muted controls playsinline loop>
+                <source src="src/IMG_4089.mp4" type="video/mp4">
+            </video>
+            <h2><span>Я люблю тебя</span></h2>
+        </seaction>
+
+        <section class="her-audio">
+            <p><span>Только я ее котик!</span></p>
+            <audio src="src/audio_2026-11-23_19-23-48.ogg" controls></audio>
+        </section>
+
+        <section class="photo-galerry">
+            <h2><span>Фотки моей принцессы</span></h2>
+            <div class="scroll-slide">
+                <img src="src/photo_1.jpg" width="400">
+                <p><span>Ты прекрасна</span></p>
+            </div>
+            <div class="scroll-slide">
+                <img src="src/photo_2.jpg" width="400">
+                <p><span>Ты замечательна</span></p>
+            </div>
+            <div class="scroll-slide">
+                <img src="src/photo_3.jpg" width="400">
+                <p><span>Ты ахуенна</span></p>
+            </div>
+            <div class="scroll-slide">
+                <img src="src/photo_4.jpg" width="400">
+                <p><span>Ты нереальна</span></p>
+            </div>
+            <div class="scroll-slide">
+                <img src="src/photo_5.jpg" width="400">
+                <p><span>Ты восхитительна</span></p>
+            </div>
+        </section>
+        <p><span>Спаси меня</span></p>
+
     </main>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.scroll-slide').forEach(img => observer.observe(img));
+    </script>
 </body>
 
 </html>

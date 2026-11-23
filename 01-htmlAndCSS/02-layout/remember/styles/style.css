@@ -126,6 +126,7 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    text-align: center;
 }
 
 .main-my-girl h1 {
@@ -136,11 +137,50 @@ nav a:hover {
 
 .main-my-girl video {
     margin: 0;
-    width: 400px;
+    width: 450px;
+}
+
+
+
+.main-my-girl span { 
+    color:red;
+    font-size: 20px;
+    font-weight: bold;
+    
+    
 }
 
 .main-my-girl h2 { 
     color:red;
+    
+}
+
+
+
+.her-audio audio{
+    margin-top:15px;
+
+}
+
+.her-audio {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.photo-galerry p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+.photo-galerry h2{
+    margin-bottom: 20px;
+
+}
+
+.photo-galerry img{
+    display: block;
+
 }
 
 .main-my-girl span:hover,
@@ -148,6 +188,20 @@ em:hover, strong:hover {
   display: inline-block;
   animation: shake 0.25s infinite;
 }
+
+.scroll-slide {
+    width: 400px;
+    opacity: 0;
+    transform: translateX(-150px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    margin: 0 auto;
+  }
+
+  .scroll-slide.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
 
 
 
