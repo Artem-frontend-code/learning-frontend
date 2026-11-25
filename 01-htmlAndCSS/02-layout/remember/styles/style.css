@@ -120,6 +120,24 @@ nav a:hover {
     justify-content: space-around;
 }
 
+.form-sad textarea {
+    
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    outline: none;
+    background: transparent;
+    border-color: black;
+    resize: none;
+}
+
+.form-sad button {
+    display: block;
+    margin: 0 auto;
+    background-color: pink;
+    
+}
+
 
 .main-my-girl {
     display: flex;
